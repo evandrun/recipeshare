@@ -1,0 +1,13 @@
+{
+  "name": "recipeshare",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs source",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs dist",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=20" }
+}
