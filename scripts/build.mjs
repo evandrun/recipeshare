@@ -27,6 +27,7 @@ const safeConfig = JSON.stringify(config).replaceAll("<", "\\u003c");
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 await cp(path.join(root, "src"), path.join(output, "src"), { recursive: true });
+await cp(path.join(root, "privacy.html"), path.join(output, "privacy.html"));
 const html = await readFile(path.join(root, "index.html"), "utf8");
 await writeFile(path.join(output, "index.html"), html.replace("<!-- recipe-share-runtime-config -->", `<script>window.RECIPE_SHARE_CONFIG=${safeConfig};</script>`));
 console.log("Built RecipeShare into dist/");
