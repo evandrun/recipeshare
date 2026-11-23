@@ -31,7 +31,7 @@ The test suite contains three tests covering filters/search, rating averages, an
 
 ### Must
 
-- [ ] M1 Recipe cards show photos, titles, cuisine, category, and rating state (partly done; live cards checked, but no numeric average is displayed until recipes have ratings).
+- [ ] M1 Recipe cards show photos, titles, cuisine, category, and rating state (partly done; live cards checked, but not every recipe has an average until it has ratings).
 - [x] M2 Recipe detail shows all recipe fields and author (checked live).
 - [ ] M3 Add a recipe and identify missing required fields (partly done; live required-field messages checked, valid database submission still needs checking).
 - [x] M4 Iranian + Main Dish filters, clearing filters, and no-results message (checked live).
@@ -45,8 +45,8 @@ The test suite contains three tests covering filters/search, rating averages, an
 - [ ] S2 Edit/delete only one's own recipes, including direct server requests (not done; requires S1 and live authorization checks).
 - [ ] S3 Signed-in-only ratings, one replaceable rating per user, and no author ratings (not done; guests can currently rate, so this does not meet the criterion).
 - [ ] S4 Persistent image upload (implementation and storage rules are present; live check requires S1).
-- [ ] S5 Search title/ingredients together with filters (implemented; needs live check).
-- [ ] S6 Sort by newest or highest rated (implemented; needs live check).
+- [x] S5 Search by title and ingredients together with filters (checked live; an ingredient search found the matching recipe).
+- [x] S6 Sort by newest or highest rated (checked live; highest-rated put the 5.0-rated recipe first).
 
 ### Could
 
