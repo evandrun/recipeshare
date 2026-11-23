@@ -1,0 +1,5 @@
+insert into public.recipes (id, author_name, title, cuisine, category, ingredients, steps, prep_minutes, image_url)
+values
+  ('10000000-0000-4000-8000-000000000001', 'RecipeShare Kitchen', 'Dill and Saffron Rice', 'Iranian', 'Main Dish', array['2 cups basmati rice','2 tbsp chopped dill','A pinch of saffron','Salt'], array['Rinse rice until the water runs clear.','Cook rice in salted water until tender.','Fold in dill and saffron, cover for 5 minutes, then serve.'], 35, 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1200&q=85'),
+  ('20000000-0000-4000-8000-000000000002', 'RecipeShare Kitchen', 'Weeknight Avocado Tacos', 'Mexican', 'Fast Food', array['8 corn tortillas','2 ripe avocados','1 lime','1 cup shredded cabbage','Salsa'], array['Warm tortillas in a dry skillet.','Slice avocado and toss cabbage with lime juice.','Fill tortillas and finish with salsa.'], 20, 'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=1200&q=85')
+on conflict (id) do nothing;
