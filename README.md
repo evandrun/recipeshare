@@ -36,7 +36,7 @@ The test suite contains three tests covering filters/search, rating averages, an
 - [x] M3 Add a recipe and identify missing required fields (checked live; a complete recipe appeared on the home page and missing-field messages were checked).
 - [x] M4 Iranian + Main Dish filters, clearing filters, and no-results message (checked live).
 - [x] M5 Submit a 1–5 rating and see average/count update on card and detail (checked live; 5.0 and 1 rating appeared on the taco detail and card).
-- [ ] M6 Shared database is configured and the live app can load it; a submitted recipe survived a reload, while cross-device and after-redeploy checks remain (partly done).
+- [ ] M6 Shared database is configured and the live app can load it; a submitted recipe survived a reload and redeploy, while cross-device verification remains (partly done).
 - [x] M7 Seeded recipes with different cuisines and categories are visible live.
 
 ### Should
