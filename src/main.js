@@ -95,7 +95,7 @@ function render() {
   const editMatch = path.match(/^\/recipes\/([^/]+)\/edit$/);
   const detailMatch = path.match(/^\/recipes\/([^/]+)$/);
   let body = path === "/new" ? recipeForm() : path === "/profile" ? profileView() : editMatch ? recipeForm(recipes.find((r) => r.id === decodeURIComponent(editMatch[1]))) : detailMatch ? detailView(recipes.find((r) => r.id === decodeURIComponent(detailMatch[1]))) : homeView();
-  root.innerHTML = `${header()}${!db ? `<div class="setup-banner"><span>Demo preview</span> Connect a free Supabase project to save recipes and ratings for everyone.</div>` : ""}${notice ? `<div class="notice-banner" role="status">${esc(notice)}</div>` : ""}${body}<footer><a class="brand" href="#/"><span class="brand-mark">R</span> recipe<span class="brand-light">share</span></a><span>Made with care, shared with the world.</span><a href="#/new">Have a recipe? Add it ↗</a></footer>`;
+  root.innerHTML = `${header()}${!db ? `<div class="setup-banner"><span>Demo preview</span> Connect a free Supabase project to save recipes and ratings for everyone.</div>` : ""}${notice ? `<div class="notice-banner" role="status">${esc(notice)}</div>` : ""}${body}<footer><a class="brand" href="#/"><span class="brand-mark">R</span> recipe<span class="brand-light">share</span></a><span>Made with care, shared with the world.</span><a href="#/new">Have a recipe? Add it ↗</a><a class="footer-privacy" href="/privacy.html">Privacy</a></footer>`;
 }
 
 function go(path) { currentRoute = path; location.hash = `#${path}`; render(); window.scrollTo(0, 0); }
